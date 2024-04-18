@@ -35,6 +35,8 @@
     <form action="d" method="post">
     <input type="Number" name="nbr"> 
     <input type="text" name="Type"> 
+     <input type="text" name="Datearr">
+    
     <button type='submit'>ev</button>
     </form>
 

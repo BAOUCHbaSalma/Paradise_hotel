@@ -1,6 +1,7 @@
 package com.octest.servlets;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -57,12 +58,13 @@ public class Acceuil extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Integer nbr=Integer.valueOf(request.getParameter("nbr"));
 		String Type=request.getParameter("Type");
+		Date Datearr=Date.valueOf(request.getParameter("Datearr"));
 		 RoomImpl roomi = new RoomImpl();
 		 
 	 	
 	 	    	
 	 	        try {
-					request.setAttribute("rooms", roomi.search(nbr,Type));
+					request.setAttribute("rooms", roomi.search(Datearr,nbr,Type));
 				} catch (ClassNotFoundException | SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

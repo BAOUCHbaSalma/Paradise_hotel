@@ -16,7 +16,7 @@ public class Nom {
 	}
 
 
-	public static List<Room> room = new ArrayList<>();
+	
    
 
 	public static Connection cnx() throws SQLException, ClassNotFoundException {
