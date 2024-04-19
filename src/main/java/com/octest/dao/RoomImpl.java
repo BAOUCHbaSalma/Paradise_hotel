@@ -42,7 +42,7 @@ public class RoomImpl implements DaoRoom{
 	@Override
 	public List<Room> search(Date Departdate,Integer nbr,String type) throws ClassNotFoundException, SQLException{
 		List<Room> Search=new ArrayList<Room>();
-		String requet = "SELECT * FROM room WHERE Disponibilite<? OR Disponibilite IS NULL OR Nombre_personne = ? OR Type = ? ";
+		String requet = "SELECT * FROM room WHERE (Disponibilite<? OR Disponibilite IS NULL) AND (Nombre_personne = ? OR Type = ?) ";
 		PreparedStatement statement = Nom.cnx().prepareStatement(requet);
 		statement.setDate(1,Departdate);
 		 statement.setInt(2,nbr);
