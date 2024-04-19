@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.octest.bains.Nom;
 import com.octest.bains.Room;
+import com.octest.dao.ReservationImpl;
 import com.octest.dao.RoomImpl;
 
 
@@ -56,19 +57,19 @@ public class Acceuil extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Integer nbr=Integer.valueOf(request.getParameter("nbr"));
+	 	   
+		Date datearriverr=Date.valueOf(request.getParameter("datearriverr"));
 		String Type=request.getParameter("Type");
-		Date Datearr=Date.valueOf(request.getParameter("Datearr"));
-		 RoomImpl roomi = new RoomImpl();
-		 
-	 	
-	 	    	
-	 	        try {
-					request.setAttribute("rooms", roomi.search(Datearr,nbr,Type));
-				} catch (ClassNotFoundException | SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+		Integer nbr=Integer.valueOf(request.getParameter("nbr"));
+		RoomImpl roomi=new RoomImpl();
+		try {
+			request.setAttribute("roomsi", roomi.search(datearriverr,nbr,Type));
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	 	   	
 	 	       request.getRequestDispatcher("/WEB-INF/Acceuil.jsp").forward(request, response);
 	}
 	

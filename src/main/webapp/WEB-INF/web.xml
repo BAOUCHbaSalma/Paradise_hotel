@@ -9,4 +9,27 @@
     <servlet-name>Acceuil</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Search</servlet-name>
+    <servlet-class>com.octest.servlets.Search</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Search</servlet-name>
+    <url-pattern>/se</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>FReserve</servlet-name>
+    <servlet-class>com.octest.servlets.FReserve</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FReserve</servlet-name>
+    <url-pattern>/reserve</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+	 	       
   </web-app>

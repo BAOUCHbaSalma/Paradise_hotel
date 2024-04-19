@@ -7,7 +7,6 @@ public class Reservation {
 	private Integer id_reservation;
 	private Date date_debut;
 	private Date date_depart;
-
 	private Integer id_room;
 	
 	public Reservation(Integer id_reservation, Date date_debut, Date date_depart, Integer id_room) {

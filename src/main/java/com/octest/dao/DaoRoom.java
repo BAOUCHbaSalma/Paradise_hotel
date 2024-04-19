@@ -8,5 +8,5 @@ import com.octest.bains.Room;
 
 public interface DaoRoom {
 List<Room> AfficherRoom() throws ClassNotFoundException, SQLException;
-List<Room> search(Date Datearr ,Integer nbr,String Type) throws ClassNotFoundException, SQLException;
+List<Room> search(Date Departdate,Integer nbr,String Type) throws ClassNotFoundException, SQLException;
 }
