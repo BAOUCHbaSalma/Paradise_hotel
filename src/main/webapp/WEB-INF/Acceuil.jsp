@@ -38,9 +38,10 @@
     }
     .title{
     	padding-top:50px;
-    	width:400px;
+    	width:700px;
     	margin:0 auto;
     	color:white;
+    	  text-align: center;
     }
     .title > h2{
     	font-size:40px;
@@ -52,8 +53,27 @@
     	font-size:14px;
     	text-transform:uppercase;
     	font-weight:600;
-    	color:grey;
+    	color:white;
+    
     }
+    
+    .check-availabilty{
+    align-content: center;
+    align-items: center;
+    position: relative;
+    top: 1px;
+    width: 90%;
+    height: 100px;
+    background: rgba(150, 200, 255, 0.8);
+
+}
+
+.form-checking{
+    justify-content: center;
+}
+
+
+    
   
 </style>
 </head>
@@ -87,7 +107,7 @@
     
     <div class="title">
     	<h2>Welcome to Paradise Hotel</h2>
-    	<br>
+  
     	<h4>Enjoy spending your time with us</h4>
     </div>
     
@@ -96,27 +116,34 @@
 
 
 
-<div class="container my-4">
-    <form action="A" method="post">
-        <div class="row">
-            <div class="col-md-4">
-                <input type="text" class="form-control"  value="Chambre" name="Type" placeholder="Rechercher par Type du chambre">
-            </div>
-            <div class="col-md-4">
-               <input type="text" class="form-control" value="2024-04-19" name="datearriverr" placeholder="AAAA-MM-JJ">
-            </div>
-             <div class="col-md-4">
-               <input type="text" class="form-control" value="1" name="nbr" placeholder="Chercher avec nombre de personnes">
-            </div>
-            <div class="col-md-4">
-                <button type="submit" class="btn btn-primary">Rechercher</button>
-            </div>
-        </div>
-    </form>
-</div>
+<div class="rounded m-5 check-availabilty" id="next">
+                <form id="formCheck" method="post" action="room" class="form-checking row" >
+                    <div class="col-md-2 mb-2">
+                        <label for="CheckIn">Check In</label>
+                        <input class="form-control mt-1" type="date" id="start" name="datearriverr" value="2024-04-19" min="2024-01-01" max="2030-12-31" />
+                    </div>
+              
+                    <div class="col-md-2 mb-2">
+                        <label for="inputAdulte">Type</label>
+                        <input class="form-control mt-1" type="text" id="inputType"value="Chambre" name="Type">
+                           
+                    </div>
+                    <div class="col-md-1 mb-2">
+                        <label for="inputAdulte">Adults</label>
+                        <input class="form-control mt-1" type="Number" id="inputAdulte" value="1" name="nbr">
+                           
+                    </div>
+                   <div>
+                    <button id="checkRoom"  style="position: relative; top:10px;background-color: #1F75FE; height: 40px; width: 200px;" class="border-0 mx-5 mt-4 text-light rounded" style="background-color: #1F75FE;"  type="submit" class="btn">Check Availabilty</button>
+                    </div>
+                </form>
+              </div>
+              
 
 
 <div class="container">
+
+   
     <div class="row">
         <c:forEach var="room" items="${rooms}">
             <div class="col-md-4">
@@ -125,7 +152,8 @@
                     <div class="card-body">
                         <h5 class="card-title">${room.getType()}</h5>
                         <p class="card-text">${room.getEquipement()}</p>
-                        <p class="card-text">Prix : ${room.getPrix()} €</p>
+                        <p class="card-text">Prix : ${room.getPrix()} DH Par nuit</p>
+                        <p class="card-text">Nombre de Personne : ${room. getNombre_personne()} </p>
                         <a href="#" class="btn btn-primary">Réserver</a>
                     </div>
                 </div>
@@ -144,7 +172,8 @@
                     <div class="card-body">
                         <h5 class="card-title">${room.getType()}</h5>
                         <p class="card-text">${room.getEquipement()}</p>
-                        <p class="card-text">Prix : ${room.getPrix()} €</p>
+                        <p class="card-text">Prix : ${room.getPrix()} DH / Par nuit</p>
+                        <p class="card-text">Nombre de Personne : ${room. getNombre_personne()} </p>
                         <a href="#" class="btn btn-primary">Réserver</a>
                     </div>
                 </div>
