@@ -33,13 +33,14 @@
         backdrop-filter: blur(15px);
     }
     header{
-    	height:300px;
-    	background: url('https://i.ibb.co/sW7zkr5/Photographie-Studio-Facebook-Couverture.jpg') no-repeat bottom right/cover;
+    	height:600px;
+    	background: url('https://i.ibb.co/Z8XKpgV/vecteezy-a-modern-hotel-room-with-a-bed-desk-and-television-33390885.jpg') no-repeat bottom right/cover;
+    	  backdrop-filter: blur(2px);
     }
     .title{
-    	padding-top:50px;
+    
     	width:700px;
-    	margin:0 auto;
+    	margin:220px auto;
     	color:white;
     	  text-align: center;
     }
