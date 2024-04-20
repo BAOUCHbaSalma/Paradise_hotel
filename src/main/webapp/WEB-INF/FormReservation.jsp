@@ -11,7 +11,13 @@
 <body>
 <style>
 body{
-background-color:grey;
+		display:flex;
+		flex-direction:column;
+		justify-content: space-between;
+		width:100%;
+		height:100vh;
+    	background: url('https://i.ibb.co/Z8XKpgV/vecteezy-a-modern-hotel-room-with-a-bed-desk-and-television-33390885.jpg') no-repeat bottom right/cover;
+    	  backdrop-filter: blur(2px);
 }
 .card {
         margin-bottom: 20px;
@@ -28,12 +34,17 @@ background-color:grey;
         padding: 20px 0;
         text-align: center;
     }
+    .brf{
+    display:flex;
+    justify-content: space-evenly
+    }
 
-.form-container {
+.form{
   width: 300px; /* Largeur du cadre */
-  margin-right: 20px; /* Marge à droite pour l'espacement */
+  margin-right: 20px;
+   /* Marge à droite pour l'espacement */
   padding: 20px;
-  background-color: #fff; /* Couleur blanche pour le cadre */
+  background-color: #ccd8ff; /* Couleur blanche pour le cadre */
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -41,6 +52,7 @@ background-color:grey;
 form {
   display: flex;
   flex-direction: column;
+  
 }
 
 input[type="text"],
@@ -62,7 +74,50 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+ nav{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        background: #ffffff47;
+        backdrop-filter: blur(15px);
+    }
+h6{
+margin-top:20px;
+color:grey;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20px;
+  letter-spacing: 0.5px; /* Espacement fin entre les lettres */
+  font-weight: 300;
+}
+h4{
+text-align:center;
+margin-bottom:20px;
+font-weight: 300;
+}
+.text{
+  width: 700px;
+  padding: 20px;
+  color:white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+ 
+}
+.reserTel{
+background-color: rgba(204, 216, 255, 0.8);	 /* Couleur bleue semi-transparente avec opacité de 50% */
+  backdrop-filter: blur(10px); 
+width:350px;
+padding:20px;
+border-radius:30px;
 
+}
+
+.reserText{
+text-align:center;
+
+
+ 
+}
 </style>
  <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -88,8 +143,20 @@ button:hover {
             </div>
         </div>
     </nav>
-  <div class="container">
-    <div class="form-container">
+  <div class="brf">
+  <div class='text'>
+  <h3>Welcome to Paradise Hotel</h3>
+      <p>Discover a world of luxury and comfort at Paradise Hotel. Our elegant rooms and suites are designed to provide you with the ultimate relaxation experience. Whether you're here for business or leisure, our hotel offers world-class amenities and exceptional service to make your stay unforgettable.</p>
+      <div class="reserTel">
+      <h5 class="reserText">Phone Reservation :</h5>
+      <h4 class="reserNum">+212 5 666 634 210</h4>
+      </div>
+      
+  </div>
+  
+    <div class="form">
+    <h6 >ROOMS & SUITES</h6>
+    <h4>Reserve Your Room</h4>
       <form action="reserve" method="post">
         <input type="text" name="Datearrive" placeholder="Date d'arrivée"> 
         <input type="text" name="Datedepart" placeholder="Date de départ"> 
@@ -100,9 +167,9 @@ button:hover {
   </div>
     
     <footer class="footer">
-    <div class="container">
+    
         <p> 2024 Mon Hôtel. Tous droits réservés.</p>
-    </div>
+    
 </footer>
 
 
