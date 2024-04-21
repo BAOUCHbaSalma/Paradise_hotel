@@ -31,6 +31,9 @@ public class FReserve extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Integer Id = Integer.valueOf(request.getParameter("Id"));
+		
+		request.setAttribute("Id", Id);
 		 request.getRequestDispatcher("/WEB-INF/FormReservation.jsp").forward(request, response);
 	}
 

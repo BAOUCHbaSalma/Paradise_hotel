@@ -55,7 +55,7 @@ form {
   
 }
 
-input[type="text"],
+input[type="Date"],
 input[type="number"],
 button {
   margin-bottom: 10px; /* Espacement entre les éléments */
@@ -119,22 +119,22 @@ text-align:center;
  
 }
 </style>
- <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Mon Hôtel</a>
+            <a class="navbar-brand" href="#">Paradise Hotel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil</a>
+                        <a class="nav-link" href="Acceuil">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Chambres</a>
+                        <a class="nav-link" href="se">Historique de reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#">About Nous</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -158,10 +158,15 @@ text-align:center;
     <h6 >ROOMS & SUITES</h6>
     <h4>Reserve Your Room</h4>
       <form action="reserve" method="post">
-        <input type="text" name="Datearrive" placeholder="Date d'arrivée"> 
-        <input type="text" name="Datedepart" placeholder="Date de départ"> 
-        <input type="number" name="idRoom" placeholder="ID de la chambre"> 
-        <button type="submit">Réserver</button>
+        <input type="Date" name="Datearrive" placeholder="Date d'arrivée"> 
+        <input type="Date" name="Datedepart" placeholder="Date de départ"> 
+        <input  type="hidden" name="idRoom" value="${Id}" placeholder="ID de la chambre"> 
+        <button onclick="reserved()" type="submit">Réserver</button>
+        <script type="text/javascript">
+        	function reserved(){
+        		alert("Room reserved successfully!")
+        	}
+        </script>
       </form>
     </div>
   </div>

@@ -32,11 +32,13 @@
         background: #ffffff47;
         backdrop-filter: blur(15px);
     }
-    header{
-    	height:600px;
-    	background: url('https://i.ibb.co/Z8XKpgV/vecteezy-a-modern-hotel-room-with-a-bed-desk-and-television-33390885.jpg') no-repeat bottom right/cover;
-    	  backdrop-filter: blur(2px);
-    }
+header {
+
+  height: 600px;
+  backdrop-filter: blur(50px);
+  background: url('https://i.ibb.co/Z8XKpgV/vecteezy-a-modern-hotel-room-with-a-bed-desk-and-television-33390885.jpg') no-repeat bottom right/cover;
+}
+
     .title{
     
     	width:700px;
@@ -73,6 +75,9 @@
     justify-content: center;
 }
 
+.form-checking {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Ombre avec décalage horizontal 0px, décalage vertical 0px, flou 10px, couleur noire semi-transparente */
+}
 
     
   
@@ -81,22 +86,22 @@
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Mon Hôtel</a>
+            <a class="navbar-brand" href="#">Paradise Hotel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil</a>
+                        <a class="nav-link" href="Acceuil">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Chambres</a>
+                        <a class="nav-link" href="se">Historique de reservation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#">About Nous</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -130,7 +135,7 @@
                            
                     </div>
                     <div class="col-md-1 mb-2">
-                        <label for="inputAdulte">Adults</label>
+                        <label for="inputAdulte">Nombre</label>
                         <input class="form-control mt-1" type="Number" id="inputAdulte" value="1" name="nbr">
                            
                     </div>
@@ -151,11 +156,12 @@
                 <div class="card">
                     <img src="${room.getImg()}" class="card-img-top" alt="Chambre">
                     <div class="card-body">
+                    <h5 class="card-title">${room.getId()}</h5>
                         <h5 class="card-title">${room.getType()}</h5>
                         <p class="card-text">${room.getEquipement()}</p>
                         <p class="card-text">Prix : ${room.getPrix()} DH Par nuit</p>
                         <p class="card-text">Nombre de Personne : ${room. getNombre_personne()} </p>
-                        <a href="#" class="btn btn-primary">Réserver</a>
+                        <a href="reserve?Id=${room.getId()}" class="btn btn-primary">Réserver</a>
                     </div>
                 </div>
             </div>
@@ -171,11 +177,12 @@
                 <div class="card">
                     <img src="${room.getImg()}" class="card-img-top" alt="Chambre">
                     <div class="card-body">
+                    <h5 class="card-title">${room.getId()}</h5>
                         <h5 class="card-title">${room.getType()}</h5>
                         <p class="card-text">${room.getEquipement()}</p>
                         <p class="card-text">Prix : ${room.getPrix()} DH / Par nuit</p>
                         <p class="card-text">Nombre de Personne : ${room. getNombre_personne()} </p>
-                        <a href="#" class="btn btn-primary">Réserver</a>
+                        <a href="reserve" class="btn btn-primary">Réserver</a>
                     </div>
                 </div>
             </div>
