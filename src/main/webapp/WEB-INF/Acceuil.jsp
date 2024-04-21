@@ -21,7 +21,7 @@
     }
     .footer {
         background-color: #f8f9fa;
-        padding: 20px 0;
+        padding: 10px 0;
         text-align: center;
     }
     nav{
@@ -31,6 +31,9 @@
         z-index: 1000;
         background: #ffffff47;
         backdrop-filter: blur(15px);
+    }
+    p{
+    margin : 0;
     }
 header {
 
@@ -75,9 +78,7 @@ header {
     justify-content: center;
 }
 
-.form-checking {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Ombre avec décalage horizontal 0px, décalage vertical 0px, flou 10px, couleur noire semi-transparente */
-}
+
 
     
   
@@ -156,12 +157,12 @@ header {
                 <div class="card">
                     <img src="${room.getImg()}" class="card-img-top" alt="Chambre">
                     <div class="card-body">
-                    <h5 class="card-title">${room.getId()}</h5>
+                   
                         <h5 class="card-title">${room.getType()}</h5>
-                        <p class="card-text">${room.getEquipement()}</p>
-                        <p class="card-text">Prix : ${room.getPrix()} DH Par nuit</p>
-                        <p class="card-text">Nombre de Personne : ${room. getNombre_personne()} </p>
-                        <a href="reserve?Id=${room.getId()}" class="btn btn-primary">Réserver</a>
+                        <p class="card-text my-2">${room.getEquipement()}</p>
+                        <p class="card-text my-2">Prix : ${room.getPrix()} DH Par nuit</p>
+                        <p class="card-text my-2">Nombre de Personne : ${room. getNombre_personne()} </p>
+                        <a href="reserve?Id=${room.getId()}" class="btn btn-primary my-2">Réserver</a>
                     </div>
                 </div>
             </div>
@@ -177,12 +178,12 @@ header {
                 <div class="card">
                     <img src="${room.getImg()}" class="card-img-top" alt="Chambre">
                     <div class="card-body">
-                    <h5 class="card-title">${room.getId()}</h5>
-                        <h5 class="card-title">${room.getType()}</h5>
-                        <p class="card-text">${room.getEquipement()}</p>
-                        <p class="card-text">Prix : ${room.getPrix()} DH / Par nuit</p>
-                        <p class="card-text">Nombre de Personne : ${room. getNombre_personne()} </p>
-                        <a href="reserve" class="btn btn-primary">Réserver</a>
+                   
+                        <h5 class="card-title my-2">${room.getType()}</h5>
+                        <p class="card-text my-2">${room.getEquipement()}</p>
+                        <p class="card-text my-2">Prix : ${room.getPrix()} DH / Par nuit</p>
+                        <p class="card-text my-2">Nombre de Personne : ${room. getNombre_personne()} </p>
+                        <a href="reserve?Id=${room.getId()}" class="btn btn-primary my-2">Réserver</a>
                     </div>
                 </div>
             </div>

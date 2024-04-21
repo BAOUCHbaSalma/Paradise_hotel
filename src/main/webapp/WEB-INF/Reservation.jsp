@@ -34,7 +34,7 @@
 		    }
 		    .footer {
 		        background-color: #f8f9fa;
-		        padding: 20px 0;
+		        padding: 10px 0;
 		        text-align: center;
 		    }
 		    nav{
@@ -75,6 +75,9 @@
 		  padding: 20px;
 		  color:rgb(240,248,255);
 		  margin-top:-30px;
+		    }
+		    p {
+		    margin : 0;
 		    }
 </style>
 

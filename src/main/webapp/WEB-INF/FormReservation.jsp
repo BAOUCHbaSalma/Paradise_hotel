@@ -31,12 +31,15 @@ body{
     }
     .footer {
         background-color: #f8f9fa;
-        padding: 20px 0;
+        padding: 10px 0;
         text-align: center;
     }
     .brf{
     display:flex;
     justify-content: space-evenly
+    }
+    p{
+    margin : 0;
     }
 
 .form{
